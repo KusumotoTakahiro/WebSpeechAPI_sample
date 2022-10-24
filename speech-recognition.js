@@ -76,6 +76,7 @@ recognition.onstart = function() {
 //
 recognition.onend = function() {
   console.log('On End');
+  recognition.start();
 }
 
 
