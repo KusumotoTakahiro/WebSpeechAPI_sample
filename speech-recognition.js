@@ -2,7 +2,7 @@ window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
 var recognition = new webkitSpeechRecognition();
 recognition.lang = 'ja';
 recognition.interimResults = true; //認識途中の結果を残すか
-recognition.continuous = false; //ある程度，認識し続けるように設定．
+recognition.continuous = true; //ある程度，認識し続けるように設定．
 let finalResults = [];
 
 //
@@ -76,7 +76,6 @@ recognition.onstart = function() {
 //
 recognition.onend = function() {
   console.log('On End');
-  recognition.start();
 }
 
 
